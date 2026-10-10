@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Churroneta map marker icon. Edit the color variables in :root to recolor it.
+  Designed on a 96 × 96 canvas; no text or raster imagery is embedded.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Churroneta</title>
+  <desc id="desc">Minimal orange churro trailer with awning, serving window and wheel.</desc>
+  <style>
+    :root {
+      --body: #F58220;
+      --body-shadow: #D96416;
+      --awning: #FFF4DE;
+      --window: #5A3826;
+      --tire: #303036;
+      --hub: #FFF4DE;
+      --outline: #4A2D22;
+    }
+    .outline { stroke: var(--outline); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <!-- Map-pin background; remove this group if only the van silhouette is wanted. -->
+  <path id="marker" d="M48 4C27.6 4 11 20.2 11 40.2 11 61.7 48 91 48 91s37-29.3 37-50.8C85 20.2 68.4 4 48 4Z" fill="#A12525"/>
+
+  <!-- Trailer body and drawbar -->
+  <g id="churroneta" class="outline">
+    <path id="drawbar" d="M17 68h-6l-3 5" fill="none"/>
+    <path id="trailer-body" d="M19 43c0-5 4-9 9-9h39c5 0 9 4 9 9v25H19Z" fill="var(--body)"/>
+    <path id="trailer-nose" d="M19 47h9v21H19c-3 0-5-2-5-5V52c0-3 2-5 5-5Z" fill="var(--body-shadow)"/>
+    <path id="lower-shadow" d="M19 62h57v6H19Z" fill="var(--body-shadow)" stroke="none"/>
+
+    <!-- Sign/toldo -->
+    <path id="top-sign" d="M25 28h46c3 0 5 2 5 5v3H20v-3c0-3 2-5 5-5Z" fill="var(--body-shadow)"/>
+    <path id="awning" d="M23 36h50l-4 8H27Z" fill="var(--awning)"/>
+    <path id="awning-stripe-left" d="M29 36h7l-3 8h-7Z" fill="var(--body)" stroke="none"/>
+    <path id="awning-stripe-right" d="M52 36h7l-3 8h-7Z" fill="var(--body)" stroke="none"/>
+
+    <!-- Service window and counter -->
+    <path id="service-window" d="M38 45h25v14H38Z" fill="var(--window)"/>
+    <path id="counter" d="M35 60h31" fill="none"/>
+    <path id="window-highlight" d="M42 49h10" fill="none" stroke="var(--awning)" stroke-width="2"/>
+
+    <!-- Single visible wheel keeps the icon crisp at small sizes. -->
+    <circle id="wheel" cx="31" cy="69" r="9" fill="var(--tire)"/>
+    <circle id="wheel-hub" cx="31" cy="69" r="3.5" fill="var(--hub)"/>
+    <path id="tail-light" d="M70 52h3" fill="none" stroke="var(--awning)" stroke-width="2"/>
+  </g>
+</svg>

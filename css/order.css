@@ -1,0 +1,98 @@
+/* margin → espacio exterior */
+/* padding → espacio interior */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Century Gothic;
+}
+header {
+    background-color: white;
+    border-radius: 0 0 30px 30px; /* arriba izquierda - arriba derecha - abajo derecha - abajo izquierda */
+    box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.25)
+
+}
+
+.header {
+    display: block;
+    margin: 0 auto; /* Centra de forma horizontal */
+    max-width: 60%;
+    height: auto;
+}
+
+body {
+    background-color: orange;
+    padding-bottom: 80px;
+}
+
+nav {
+  position: fixed; /* Lo fija en la pantalla */
+  bottom: 0;       /* Lo pega al borde inferior */
+  left: 0;         /* Lo alinea desde la izquierda */
+  width: 100%;     /* Hace que ocupe todo el ancho */
+  z-index: 1000;   /* Mantiene el menú por encima del contenido */
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+}
+
+.parent{
+    font-size: 4vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.parent img{
+    height: 60px;
+}
+
+a {
+  border-radius: 30px;
+  box-shadow: 0px 0px 13px 4px rgba(14, 89, 202, 0.20);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+h2 {
+    margin: 20px 5px;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+.tarjeta {
+    background-color: #412f25;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.tarjeta p {
+    padding: 5px;
+}
+
+.tarjeta img{
+    width: 100px;
+}
+
+.tarjeta button {
+    display: block;
+    margin-left: auto;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 20vw;
+    cursor: pointer;
+}
+
+.tarjeta button:hover {
+    background-color: #f2a052;
+    color: white;
+}
+
